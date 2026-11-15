@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       Brew Haven — About Page (about.html)
+       Our story, values, and team
+       ============================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Brew Haven's journey from a small dream to a beloved community coffee shop. Meet our team and discover our values.">
+  <title>About Us — Brew Haven</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       NAVIGATION BAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Brew Haven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <!-- Mobile Reservation Link inside menu -->
+        <li class="mobile-only"><button class="mobile-nav-reserve-btn" id="mobileReserveBtn">Reserve Table</button></li>
+      </ul>
+      <div class="nav-actions">
+        <!-- Reserve Table Button (Desktop) -->
+        <button class="btn-nav-reserve" id="navReserveBtn">Reserve Table</button>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="hero-badge">Est. 2018</span>
+        <h1 class="page-hero-title">Our Story</h1>
+        <p class="page-hero-description">
+          From a passion project to a community cornerstone — this is how Brew Haven came to be.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>About Us</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         OUR STORY SECTION
+         ============================================ -->
+    <section class="about-full">
+      <div class="container">
+
+        <!-- Story Block 1: How It Started -->
+        <div class="about-story scroll-animate">
+          <div>
+            <img src="images/about_coffee.jpg" alt="Coffee being prepared at Brew Haven" class="story-image">
+          </div>
+          <div class="story-content">
+            <h2>How It All Started</h2>
+            <p>
+              In 2018, two lifelong friends — Elena Martinez and James Porter — shared a dream: 
+              to create a space where people could slow down, connect, and enjoy truly exceptional coffee.
+            </p>
+            <p>
+              Armed with a vintage espresso machine, a small savings fund, and an unwavering passion 
+              for the perfect brew, they transformed a modest storefront near NIT Warangal into what would become 
+              the heart of the local community.
+            </p>
+            <p>
+              The name "Brew Haven" was born from the idea that everyone deserves a haven — a peaceful, 
+              welcoming place where the aroma of freshly roasted coffee fills the air and every visitor 
+              feels like family.
+            </p>
+          </div>
+        </div>
+
+        <!-- Story Block 2: Our Philosophy -->
+        <div class="about-story reverse scroll-animate">
+          <div>
+            <img src="images/gallery_2.jpg" alt="Premium roasted coffee beans" class="story-image">
+          </div>
+          <div class="story-content">
+            <h2>Our Coffee Philosophy</h2>
+            <p>
+              At Brew Haven, we believe coffee is more than just a drink — it's a craft, a ritual, 
+              and a connection to communities across the globe. Every bean tells a story of the 
+              farmer who grew it, the land it came from, and the care taken at every step.
+            </p>
+            <p>
+              We work directly with small-scale farmers to source beans that meet our exacting quality 
+              standards while ensuring fair compensation for their incredible work.
+            </p>
+            <p>
+              Our roasting process is carefully calibrated to bring out the unique 
+              flavor profile of each origin — from bright citrus notes to deep chocolate undertones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         OUR VALUES
+         ============================================ -->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">What We Stand For</span>
+          <h2 class="section-title">Our Core Values</h2>
+          <p class="section-description">
+            These principles guide every decision we make, from sourcing to serving.
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card scroll-animate">
+            <div class="value-icon">🌱</div>
+            <h3 class="value-title">Sustainability</h3>
+            <p class="value-text">
+              We use compostable cups, source ethically traded beans, and minimize waste 
+              through composting and recycling programs.
+            </p>
+          </div>
+          <div class="value-card scroll-animate">
+            <div class="value-icon">🤝</div>
+            <h3 class="value-title">Community</h3>
+            <p class="value-text">
+              We host local art shows, open mic nights, and charity events. Our shop is 
+              a gathering place for neighbors, NIT students, and dreamers.
+            </p>
+          </div>
+          <div class="value-card scroll-animate">
+            <div class="value-icon">⭐</div>
+            <h3 class="value-title">Quality</h3>
+            <p class="value-text">
+              No shortcuts, no compromises. From the beans we select to the milk we steam, 
+              quality is at the heart of everything we do.
+            </p>
+          </div>
+          <div class="value-card scroll-animate">
+            <div class="value-icon">💡</div>
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-text">
+              We're always experimenting with new flavors, brewing methods, and seasonal 
+              specials to keep your taste buds excited.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         MEET OUR TEAM
+         ============================================ -->
+    <section class="team-section">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">The Faces Behind the Brew</span>
+          <h2 class="section-title">Meet Our Team</h2>
+          <p class="section-description">
+            Passionate people who make Brew Haven special every single day.
+          </p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card scroll-animate">
+            <div class="team-avatar">Elena</div>
+            <h3 class="team-name">Elena Martinez</h3>
+            <p class="team-role">Co-Founder & Head Roaster</p>
+            <p class="team-bio">
+              With over 15 years in specialty coffee, Elena brings her expertise 
+              in roasting and sourcing to every batch.
+            </p>
+          </div>
+          <div class="team-card scroll-animate">
+            <div class="team-avatar">James</div>
+            <h3 class="team-name">James Porter</h3>
+            <p class="team-role">Co-Founder & Operations</p>
+            <p class="team-bio">
+              James manages the business side while ensuring every customer 
+              has a memorable experience at Brew Haven.
+            </p>
+          </div>
+          <div class="team-card scroll-animate">
+            <div class="team-avatar">Marcus</div>
+            <h3 class="team-name">Marcus Lee</h3>
+            <p class="team-role">Head Barista</p>
+            <p class="team-bio">
+              A certified SCA barista champion, Marcus leads our bar team 
+              with skill, creativity, and a warm smile.
+            </p>
+          </div>
+          <div class="team-card scroll-animate">
+            <div class="team-avatar">Sophie</div>
+            <h3 class="team-name">Sophie Williams</h3>
+            <p class="team-role">Pastry Chef</p>
+            <p class="team-bio">
+              Sophie creates fresh, gourmet pastries and baked goods in-house 
+              every single morning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content scroll-animate">
+          <h2 class="cta-title">Come Visit Us Today</h2>
+          <p class="cta-text">
+            We'd love to share a cup with you. Find us near NIT Warangal.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">Brew Haven</span>
+          </div>
+          <p class="footer-description">
+            Crafting perfect moments, one cup at a time. 
+            Visit us for the finest artisan coffee experience in town.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Opening Hours</h3>
+          <ul class="footer-hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 10:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+            <li><span>Sunday</span><span>8:00 AM – 9:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Info</h3>
+          <ul class="footer-contact">
+            <li>📍 Near NIT Warangal, Hanamkonda, Warangal, Telangana, India</li>
+            <li>📞 +91 90000 12345</li>
+            <li>✉️ <a href="mailto:reddysaicharan268@gmail.com" style="color: inherit; text-decoration: none;">reddysaicharan268@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew Haven Coffee Shop. All Rights Reserved.</p>
+        <p class="footer-designer">
+          Designed & Developed by 
+          <a href="https://github.com/saicharanreddy0825" target="_blank" rel="noopener noreferrer" class="designer-link">Thagireddy Sai Charan Reddy</a>
+          <span class="designer-title">| Full Stack Web Developer</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- ============================================
+       RESERVATION MODAL
+       ============================================ -->
+  <div class="modal" id="reservationModal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-target="book-tab">Book A Table</button>
+          <button class="modal-tab" data-target="view-tab" id="viewBookingsTab">My Reservations</button>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <!-- BOOK TABLE TAB -->
+        <div class="tab-content active" id="book-tab">
+          <h2 class="modal-title">Table Reservation</h2>
+          <p class="modal-subtitle">Secure your spot at Brew Haven Coffee Shop</p>
+          
+          <form id="reservationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName" class="form-label">Full Name *</label>
+                <input type="text" id="resName" class="form-input" placeholder="Your Name" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Mobile Number *</label>
+                <input type="tel" id="resPhone" class="form-input" placeholder="+91 90000 12345" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resEmail" class="form-label">Email Address *</label>
+                <input type="email" id="resEmail" class="form-input" placeholder="email@example.com" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Number of Guests *</label>
+                <select id="resGuests" class="form-select" required>
+                  <option value="" disabled selected>Select guests</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6+ People</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate" class="form-label">Reservation Date *</label>
+                <input type="date" id="resDate" class="form-input" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resTime" class="form-label">Reservation Time *</label>
+                <select id="resTime" class="form-select" required>
+                  <option value="" disabled selected>Select time slot</option>
+                  <option value="07:00 AM">07:00 AM</option>
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                  <option value="09:00 PM">09:00 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Seating Preference *</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Indoor" checked>
+                  <span>Indoor Seating</span>
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Outdoor">
+                  <span>Outdoor Seating (Garden/Balcony)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="resRequests" class="form-label">Special Requests</label>
+              <textarea id="resRequests" class="form-textarea" placeholder="E.g., birthday setup, high chair for baby, window seat, allergy details..." rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+          </form>
+        </div>
+        
+        <!-- VIEW RESERVATIONS TAB -->
+        <div class="tab-content" id="view-tab">
+          <h2 class="modal-title">My Reservations</h2>
+          <p class="modal-subtitle">Manage your bookings at Brew Haven</p>
+          
+          <div class="bookings-list" id="bookingsList">
+            <!-- Dynamically populated by JS -->
+            <div class="no-bookings">No reservations found yet. Book a table to get started!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEAUTIFUL CUSTOM TOAST SUCCESS POPUP -->
+  <div class="toast-popup" id="toastPopup" role="alert">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <h4 class="toast-title">Reservation Successful!</h4>
+      <p class="toast-message">Your table is locked in. See you soon!</p>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

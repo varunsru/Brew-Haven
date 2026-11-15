@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       Brew Haven — Menu Page (menu.html)
+       Full coffee and food menu with category tabs
+       ============================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Brew Haven menu — artisan coffees, specialty teas, refreshing cold drinks, and freshly baked pastries near NIT Warangal.">
+  <title>Our Menu — Brew Haven</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       NAVIGATION BAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Brew Haven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <!-- Mobile Reservation Link inside menu -->
+        <li class="mobile-only"><button class="mobile-nav-reserve-btn" id="mobileReserveBtn">Reserve Table</button></li>
+      </ul>
+      <div class="nav-actions">
+        <!-- Reserve Table Button (Desktop) -->
+        <button class="btn-nav-reserve" id="navReserveBtn">Reserve Table</button>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="hero-badge">Crafted With Care</span>
+        <h1 class="page-hero-title">Our Menu</h1>
+        <p class="page-hero-description">
+          From classic espresso to signature creations — every drink is crafted to perfection.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Menu</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         MENU SECTION WITH TABS
+         ============================================ -->
+    <section class="menu-section">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">Explore</span>
+          <h2 class="section-title">What We Serve</h2>
+          <p class="section-description">
+            Browse by category or scroll through our complete offerings.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="menu-tabs scroll-animate">
+          <button class="menu-tab active" data-category="all">All</button>
+          <button class="menu-tab" data-category="coffee">Coffee</button>
+          <button class="menu-tab" data-category="tea">Tea</button>
+          <button class="menu-tab" data-category="cold">Cold Drinks</button>
+          <button class="menu-tab" data-category="pastry">Pastries</button>
+          <button class="menu-tab" data-category="breakfast">Breakfast</button>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid">
+
+          <!-- ---- COFFEE ---- -->
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/espresso.jpg" alt="Classic Espresso" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Classic Espresso</h3>
+                <span class="menu-card-price">$3.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Rich, bold single or double shot of our house espresso blend.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Classic Espresso" data-price="3.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/caramel_macchiato.jpg" alt="Caramel Macchiato" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Caramel Macchiato</h3>
+                <span class="menu-card-price">$5.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(5.0)</span>
+              </div>
+              <p class="menu-card-description">Espresso with vanilla syrup, steamed milk, and buttery caramel drizzle.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Caramel Macchiato" data-price="5.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/cappuccino.jpg" alt="Cappuccino" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cappuccino</h3>
+                <span class="menu-card-price">$4.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Equal parts espresso, steamed milk, and velvety milk foam.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Cappuccino" data-price="4.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/flat_white.jpg" alt="Flat White" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Flat White</h3>
+                <span class="menu-card-price">$4.95</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Velvety micro-foam over a double ristretto shot. Smooth and rich.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Flat White" data-price="4.95">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/mocha_latte.jpg" alt="Mocha Latte" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Mocha Latte</h3>
+                <span class="menu-card-price">$5.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Espresso with rich Belgian chocolate and steamed milk, topped with whipped cream.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Mocha Latte" data-price="5.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="coffee">
+            <div class="menu-card-image-container">
+              <img src="images/menu/pour_over.jpg" alt="Pour Over" class="menu-card-image">
+              <span class="menu-card-badge">Coffee</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Pour Over</h3>
+                <span class="menu-card-price">$5.25</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Hand-poured single-origin coffee, brewed to highlight unique flavor notes.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Pour Over" data-price="5.25">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---- TEA ---- -->
+          <div class="menu-card scroll-animate" data-category="tea">
+            <div class="menu-card-image-container">
+              <img src="images/menu/matcha_latte.jpg" alt="Matcha Latte" class="menu-card-image">
+              <span class="menu-card-badge">Tea</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Matcha Latte</h3>
+                <span class="menu-card-price">$5.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Ceremonial-grade matcha whisked with oat milk and a touch of honey.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Matcha Latte" data-price="5.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="tea">
+            <div class="menu-card-image-container">
+              <img src="images/menu/chai_latte.jpg" alt="Chai Latte" class="menu-card-image">
+              <span class="menu-card-badge">Tea</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Chai Latte</h3>
+                <span class="menu-card-price">$5.25</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.7)</span>
+              </div>
+              <p class="menu-card-description">Spiced black tea with cinnamon, cardamom, ginger, and steamed milk.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Chai Latte" data-price="5.25">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="tea">
+            <div class="menu-card-image-container">
+              <img src="images/menu/earl_grey.jpg" alt="Earl Grey" class="menu-card-image">
+              <span class="menu-card-badge">Tea</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Earl Grey</h3>
+                <span class="menu-card-price">$3.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.6)</span>
+              </div>
+              <p class="menu-card-description">Classic bergamot-infused black tea, served with lemon or milk.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Earl Grey" data-price="3.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="tea">
+            <div class="menu-card-image-container">
+              <img src="images/menu/jasmine_green.jpg" alt="Jasmine Green Tea" class="menu-card-image">
+              <span class="menu-card-badge">Tea</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Jasmine Green Tea</h3>
+                <span class="menu-card-price">$3.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.7)</span>
+              </div>
+              <p class="menu-card-description">Delicate green tea scented with jasmine blossoms. Light and fragrant.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Jasmine Green Tea" data-price="3.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---- COLD DRINKS ---- -->
+          <div class="menu-card scroll-animate" data-category="cold">
+            <div class="menu-card-image-container">
+              <img src="images/menu/cold_brew.jpg" alt="Classic Cold Brew" class="menu-card-image">
+              <span class="menu-card-badge">Cold</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Classic Cold Brew</h3>
+                <span class="menu-card-price">$4.95</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Slow-steeped for 20 hours. Smooth, bold, and naturally sweet.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Classic Cold Brew" data-price="4.95">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="cold">
+            <div class="menu-card-image-container">
+              <img src="images/menu/cold_brew_tonic.jpg" alt="Cold Brew Tonic" class="menu-card-image">
+              <span class="menu-card-badge">Cold</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cold Brew Tonic</h3>
+                <span class="menu-card-price">$6.25</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Cold brew over sparkling tonic water with fresh citrus. Refreshingly unique.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Cold Brew Tonic" data-price="6.25">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="cold">
+            <div class="menu-card-image-container">
+              <img src="images/menu/iced_vanilla_latte.jpg" alt="Iced Vanilla Latte" class="menu-card-image">
+              <span class="menu-card-badge">Cold</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Iced Vanilla Latte</h3>
+                <span class="menu-card-price">$5.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.7)</span>
+              </div>
+              <p class="menu-card-description">Espresso with vanilla bean syrup, cold milk, and ice. A cool classic.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Iced Vanilla Latte" data-price="5.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="cold">
+            <div class="menu-card-image-container">
+              <img src="images/menu/berry_smoothie.jpg" alt="Berry Smoothie" class="menu-card-image">
+              <span class="menu-card-badge">Cold</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Berry Smoothie</h3>
+                <span class="menu-card-price">$6.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.6)</span>
+              </div>
+              <p class="menu-card-description">Mixed berries, banana, yogurt, and honey blended until creamy smooth.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Berry Smoothie" data-price="6.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---- PASTRIES ---- -->
+          <div class="menu-card scroll-animate" data-category="pastry">
+            <div class="menu-card-image-container">
+              <img src="images/menu/butter_croissant.jpg" alt="Butter Croissant" class="menu-card-image">
+              <span class="menu-card-badge">Pastry</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Butter Croissant</h3>
+                <span class="menu-card-price">$3.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Flaky, golden, and buttery. Baked fresh every morning.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Butter Croissant" data-price="3.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="pastry">
+            <div class="menu-card-image-container">
+              <img src="images/menu/blueberry_muffin.jpg" alt="Blueberry Muffin" class="menu-card-image">
+              <span class="menu-card-badge">Pastry</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Blueberry Muffin</h3>
+                <span class="menu-card-price">$3.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Moist muffin packed with fresh blueberries and a crumb topping.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Blueberry Muffin" data-price="3.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="pastry">
+            <div class="menu-card-image-container">
+              <img src="images/menu/cinnamon_roll.jpg" alt="Cinnamon Roll" class="menu-card-image">
+              <span class="menu-card-badge">Pastry</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cinnamon Roll</h3>
+                <span class="menu-card-price">$4.25</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Warm cinnamon-swirled dough with cream cheese icing. Irresistible.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Cinnamon Roll" data-price="4.25">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="pastry">
+            <div class="menu-card-image-container">
+              <img src="images/menu/chocolate_chip_cookie.jpg" alt="Chocolate Chip Cookie" class="menu-card-image">
+              <span class="menu-card-badge">Pastry</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Chocolate Chip Cookie</h3>
+                <span class="menu-card-price">$2.75</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Chewy center, crispy edges, loaded with Belgian chocolate chips.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Chocolate Chip Cookie" data-price="2.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---- BREAKFAST ---- -->
+          <div class="menu-card scroll-animate" data-category="breakfast">
+            <div class="menu-card-image-container">
+              <img src="images/menu/avocado_toast.jpg" alt="Avocado Toast" class="menu-card-image">
+              <span class="menu-card-badge">Breakfast</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Avocado Toast</h3>
+                <span class="menu-card-price">$8.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="menu-card-description">Smashed avocado on sourdough with cherry tomatoes, feta, and chili flakes.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Avocado Toast" data-price="8.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="breakfast">
+            <div class="menu-card-image-container">
+              <img src="images/menu/breakfast_sandwich.jpg" alt="Breakfast Sandwich" class="menu-card-image">
+              <span class="menu-card-badge">Breakfast</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Breakfast Sandwich</h3>
+                <span class="menu-card-price">$7.95</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Scrambled eggs, cheddar cheese, and bacon on a toasted brioche bun.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Breakfast Sandwich" data-price="7.95">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="breakfast">
+            <div class="menu-card-image-container">
+              <img src="images/menu/acai_bowl.jpg" alt="Açaí Bowl" class="menu-card-image">
+              <span class="menu-card-badge">Breakfast</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Açaí Bowl</h3>
+                <span class="menu-card-price">$9.50</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.7)</span>
+              </div>
+              <p class="menu-card-description">Açaí blend topped with granola, fresh fruit, coconut, and honey drizzle.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Açaí Bowl" data-price="9.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-card scroll-animate" data-category="breakfast">
+            <div class="menu-card-image-container">
+              <img src="images/menu/pancake_stack.jpg" alt="Pancake Stack" class="menu-card-image">
+              <span class="menu-card-badge">Breakfast</span>
+            </div>
+            <div class="menu-card-info">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Pancake Stack</h3>
+                <span class="menu-card-price">$8.95</span>
+              </div>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="menu-card-description">Fluffy buttermilk pancakes with maple syrup, berries, and whipped cream.</p>
+              <div class="menu-card-footer">
+                <button class="btn-order-now" data-item="Pancake Stack" data-price="8.95">Order Now</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content scroll-animate">
+          <h2 class="cta-title">Can't Decide? Visit Us!</h2>
+          <p class="cta-text">
+            Our baristas are happy to recommend the perfect drink based on your taste.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Find Our Location</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">Brew Haven</span>
+          </div>
+          <p class="footer-description">
+            Crafting perfect moments, one cup at a time. 
+            Visit us for the finest artisan coffee experience in town.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Opening Hours</h3>
+          <ul class="footer-hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 10:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+            <li><span>Sunday</span><span>8:00 AM – 9:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Info</h3>
+          <ul class="footer-contact">
+            <li>📍 Near NIT Warangal, Hanamkonda, Warangal, Telangana, India</li>
+            <li>📞 +91 90000 12345</li>
+            <li>✉️ <a href="mailto:reddysaicharan268@gmail.com" style="color: inherit; text-decoration: none;">reddysaicharan268@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew Haven Coffee Shop. All Rights Reserved.</p>
+        <p class="footer-designer">
+          Designed & Developed by 
+          <a href="https://github.com/saicharanreddy0825" target="_blank" rel="noopener noreferrer" class="designer-link">Thagireddy Sai Charan Reddy</a>
+          <span class="designer-title">| Full Stack Web Developer</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- ============================================
+       RESERVATION MODAL
+       ============================================ -->
+  <div class="modal" id="reservationModal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-target="book-tab">Book A Table</button>
+          <button class="modal-tab" data-target="view-tab" id="viewBookingsTab">My Reservations</button>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <!-- BOOK TABLE TAB -->
+        <div class="tab-content active" id="book-tab">
+          <h2 class="modal-title">Table Reservation</h2>
+          <p class="modal-subtitle">Secure your spot at Brew Haven Coffee Shop</p>
+          
+          <form id="reservationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName" class="form-label">Full Name *</label>
+                <input type="text" id="resName" class="form-input" placeholder="Your Name" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Mobile Number *</label>
+                <input type="tel" id="resPhone" class="form-input" placeholder="+91 90000 12345" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resEmail" class="form-label">Email Address *</label>
+                <input type="email" id="resEmail" class="form-input" placeholder="email@example.com" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Number of Guests *</label>
+                <select id="resGuests" class="form-select" required>
+                  <option value="" disabled selected>Select guests</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6+ People</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate" class="form-label">Reservation Date *</label>
+                <input type="date" id="resDate" class="form-input" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resTime" class="form-label">Reservation Time *</label>
+                <select id="resTime" class="form-select" required>
+                  <option value="" disabled selected>Select time slot</option>
+                  <option value="07:00 AM">07:00 AM</option>
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                  <option value="09:00 PM">09:00 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Seating Preference *</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Indoor" checked>
+                  <span>Indoor Seating</span>
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Outdoor">
+                  <span>Outdoor Seating (Garden/Balcony)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="resRequests" class="form-label">Special Requests</label>
+              <textarea id="resRequests" class="form-textarea" placeholder="E.g., birthday setup, high chair for baby, window seat, allergy details..." rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+          </form>
+        </div>
+        
+        <!-- VIEW RESERVATIONS TAB -->
+        <div class="tab-content" id="view-tab">
+          <h2 class="modal-title">My Reservations</h2>
+          <p class="modal-subtitle">Manage your bookings at Brew Haven</p>
+          
+          <div class="bookings-list" id="bookingsList">
+            <!-- Dynamically populated by JS -->
+            <div class="no-bookings">No reservations found yet. Book a table to get started!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEAUTIFUL CUSTOM TOAST SUCCESS POPUP -->
+  <div class="toast-popup" id="toastPopup" role="alert">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <h4 class="toast-title">Reservation Successful!</h4>
+      <p class="toast-message">Your table is locked in. See you soon!</p>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       Brew Haven — Home Page (index.html)
+       The main landing page for the coffee shop
+       ============================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brew Haven — Your neighborhood artisan coffee shop. Experience premium hand-crafted coffee, fresh pastries, and a cozy atmosphere in the heart of Hanamkonda, Warangal.">
+  <meta name="keywords" content="coffee shop, artisan coffee, espresso, latte, pastries, cafe, Brew Haven, Warangal, NIT Warangal">
+  <meta name="author" content="Brew Haven">
+
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:title" content="Brew Haven — Artisan Coffee Shop">
+  <meta property="og:description" content="Crafting perfect moments, one cup at a time. Premium hand-crafted coffee & fresh pastries.">
+  <meta property="og:type" content="website">
+
+  <title>Brew Haven — Artisan Coffee Shop</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to Content Link (Accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       NAVIGATION BAR
+       Fixed at top, transparent → solid on scroll
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Brew Haven</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <!-- Mobile Reservation Link inside menu -->
+        <li class="mobile-only"><button class="mobile-nav-reserve-btn" id="mobileReserveBtn">Reserve Table</button></li>
+      </ul>
+
+      <!-- Right-side Actions -->
+      <div class="nav-actions">
+        <!-- Reserve Table Button (Desktop) -->
+        <button class="btn-nav-reserve" id="navReserveBtn">Reserve Table</button>
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <!-- Hamburger Menu (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main-content">
+
+    <!-- ============================================
+         HERO SECTION
+         Full-screen intro with background image
+         ============================================ -->
+    <section class="hero">
+      <!-- Background Image -->
+      <img src="images/hero_bg.jpg" alt="Brew Haven coffee shop interior" class="hero-bg">
+      <!-- Dark Overlay for text readability -->
+      <div class="hero-overlay"></div>
+
+      <!-- Decorative floating circles -->
+      <div class="hero-float hero-float-1"></div>
+      <div class="hero-float hero-float-2"></div>
+      <div class="hero-float hero-float-3"></div>
+
+      <!-- Hero Text Content -->
+      <div class="hero-content">
+        <span class="hero-badge">☕ Established 2018</span>
+        <h1 class="hero-title">
+          Where Every Cup Tells a <span>Story</span>
+        </h1>
+        <p class="hero-subtitle">
+          Discover the art of perfectly crafted coffee in our cozy haven. 
+          From single-origin beans to signature blends, every sip is an experience.
+        </p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-secondary">Explore Our Menu</a>
+          <button class="btn btn-primary" id="heroReserveBtn">Reserve Table</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES / HIGHLIGHTS (Why Choose Us)
+         ============================================ -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">Why Choose Us</span>
+          <h2 class="section-title">Crafted for Excellence</h2>
+          <p class="section-description">
+            Experience the finest coffee culture tailored to your tastes.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.88 4.29a7.61 7.61 0 0 0-10.76 0C5.16 7.24 4.54 11.23 6.3 14.54l-2.01 2a1 1 0 0 0 1.41 1.41l2-2.01a7.67 7.67 0 0 0 11.18-.08c2.95-2.95 2.95-7.73 0-10.57zm-1.41 9.16a5.61 5.61 0 0 1-7.93 0 5.61 5.61 0 0 1 0-7.93 5.61 5.61 0 0 1 7.93 0 5.61 5.61 0 0 1 0 7.93z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Premium Beans</h3>
+            <p class="feature-text">
+              Sourced from the world's finest coffee farms. 
+              Every bean is hand-selected and ethically traded.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8h-2V5a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v8a4 4 0 0 0 4 4h9a4 4 0 0 0 4-4v-2h2a3 3 0 0 0 3-3V11a3 3 0 0 0-3-3zm-4 5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8zm4-3a1 1 0 0 1-1 1h-1V10h1a1 1 0 0 1 1 1v1z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Expert Baristas</h3>
+            <p class="feature-text">
+              Our skilled baristas craft each drink with passion 
+              and precision, ensuring perfection in every cup.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H2v2h1v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8h1V6h-3zm-12-1h10v1H7V5zm11 14H6V8h12v11zM9 10h6v2H9v-2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Cozy Ambiance</h3>
+            <p class="feature-text">
+              A warm, welcoming space designed for relaxation, 
+              work, or catching up with friends and family.
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-card scroll-animate">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.9 11.1c-.2-.4-.6-.6-1.1-.6h-1.9c-.7-2.3-2.3-4.2-4.6-5.1-.3-.1-.7-.2-1-.2h-2.6c-.3 0-.7.1-1 .2-2.3.9-3.9 2.8-4.6 5.1H3.2c-.5 0-.9.2-1.1.6s-.1.9.2 1.2l4.8 4.8c.4.4.9.6 1.4.6h7c.5 0 1-.2 1.4-.6l4.8-4.8c.3-.3.4-.8.2-1.2zM7.5 13.5l-2.6-2.6h2.1l.5 2.6zm6.5 2.5h-4l-.8-4h5.6l-.8 4zm2.5-2.5l.5-2.6h2.1l-2.6 2.6z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fresh Pastries</h3>
+            <p class="feature-text">
+              Baked fresh daily by our in-house pastry chef. 
+              The perfect companion to your favorite brew.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT PREVIEW SECTION
+         Two-column layout: image + text
+         ============================================ -->
+    <section class="about-preview">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left: Image -->
+          <div class="about-image-wrapper scroll-animate">
+            <img src="images/about_coffee.jpg" alt="Barista preparing artisan coffee" class="about-image">
+            <div class="about-image-accent"></div>
+          </div>
+
+          <!-- Right: Text Content -->
+          <div class="about-content scroll-animate">
+            <span class="section-subtitle">Our Story</span>
+            <h2 class="section-title">Crafting Coffee Since 2018</h2>
+            <p class="about-text">
+              What started as a small dream in a corner of downtown has grown into 
+              a beloved community gathering place. At Brew Haven, we believe that 
+              great coffee brings people together.
+            </p>
+            <p class="about-text">
+              Every cup we serve is a reflection of our dedication to quality, 
+              sustainability, and the art of coffee making. From seed to cup, 
+              we ensure every step meets our exacting standards.
+            </p>
+            <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+
+            <!-- Statistics -->
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Years</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Cups Served</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURED MENU PREVIEW
+         Showcase 3 popular items from the menu
+         ============================================ -->
+    <section class="menu-featured">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">Our Menu</span>
+          <h2 class="section-title">Customer Favorites</h2>
+          <p class="section-description">
+            Discover the drinks that keep our customers coming back for more.
+          </p>
+        </div>
+        <div class="featured-grid">
+          <div class="featured-card scroll-animate">
+            <div class="featured-image-container">
+              <img src="images/menu_latte.jpg" alt="Caramel Macchiato" class="featured-img">
+              <span class="featured-badge">Best Seller</span>
+            </div>
+            <div class="featured-info">
+              <h3 class="featured-name">Caramel Macchiato</h3>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.9)</span>
+              </div>
+              <p class="featured-description">Rich espresso with vanilla syrup, steamed milk, and buttery caramel drizzle.</p>
+              <div class="featured-footer">
+                <span class="featured-price">$5.50</span>
+                <button class="btn-order-now" data-item="Caramel Macchiato" data-price="5.50">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="featured-card scroll-animate">
+            <div class="featured-image-container">
+              <img src="images/menu_tea.jpg" alt="Matcha Latte" class="featured-img">
+              <span class="featured-badge">Popular</span>
+            </div>
+            <div class="featured-info">
+              <h3 class="featured-name">Matcha Latte</h3>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.8)</span>
+              </div>
+              <p class="featured-description">Ceremonial-grade matcha whisked with oat milk and a touch of honey.</p>
+              <div class="featured-footer">
+                <span class="featured-price">$5.75</span>
+                <button class="btn-order-now" data-item="Matcha Latte" data-price="5.75">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="featured-card scroll-animate">
+            <div class="featured-image-container">
+              <img src="images/menu_cold.jpg" alt="Cold Brew Tonic" class="featured-img">
+              <span class="featured-badge">New</span>
+            </div>
+            <div class="featured-info">
+              <h3 class="featured-name">Cold Brew Tonic</h3>
+              <div class="menu-card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-val">(4.7)</span>
+              </div>
+              <p class="featured-description">Smooth cold brew coffee poured over sparkling tonic water with fresh citrus.</p>
+              <div class="featured-footer">
+                <span class="featured-price">$6.25</span>
+                <button class="btn-order-now" data-item="Cold Brew Tonic" data-price="6.25">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="menu.html" class="btn btn-outline">View Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS / REVIEWS SLIDER
+         ============================================ -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">Testimonials</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-description">
+            Don't just take our word for it — hear from our amazing community.
+          </p>
+        </div>
+
+        <!-- Slider -->
+        <div class="reviews-slider scroll-animate">
+          <div class="reviews-track">
+            <!-- Review 1 -->
+            <div class="review-slide">
+              <div class="review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">
+                  "Brew Haven is my go-to spot every morning. The coffee is consistently 
+                  amazing, and the atmosphere is so warm and inviting. Their caramel 
+                  macchiato is absolutely divine!"
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar">SE</div>
+                  <div class="review-info">
+                    <h4>Sarah Edwards</h4>
+                    <p>Regular Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-slide">
+              <div class="review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">
+                  "I've tried coffee shops all over the city, and nothing compares to 
+                  Brew Haven. The quality of their beans and the skill of their baristas 
+                  is truly top-notch. A hidden gem!"
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar">MJ</div>
+                  <div class="review-info">
+                    <h4>Michael Johnson</h4>
+                    <p>Coffee Enthusiast</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-slide">
+              <div class="review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">
+                  "Perfect place to work remotely! Great Wi-Fi, comfortable seating, 
+                  and the pastries are to die for. I practically live here on weekdays. 
+                  The staff is incredibly friendly!"
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar">LP</div>
+                  <div class="review-info">
+                    <h4>Lisa Park</h4>
+                    <p>Freelance Designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Review 4 -->
+            <div class="review-slide">
+              <div class="review-card">
+                <span class="review-quote">"</span>
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">
+                  "The best cold brew in town, hands down. And their commitment to 
+                  sustainability really sets them apart. Love that they use compostable 
+                  cups and source ethically!"
+                </p>
+                <div class="review-author">
+                  <div class="review-avatar">DC</div>
+                  <div class="review-info">
+                    <h4>David Chen</h4>
+                    <p>Environmental Advocate</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button class="slider-btn" id="sliderPrev" aria-label="Previous review">←</button>
+            <div class="slider-dots">
+              <!-- Dots are created dynamically by JavaScript -->
+            </div>
+            <button class="slider-btn" id="sliderNext" aria-label="Next review">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA (Call To Action) SECTION
+         ============================================ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content scroll-animate">
+          <h2 class="cta-title">Ready for Your Perfect Cup?</h2>
+          <p class="cta-text">
+            Visit us today and discover why thousands of coffee lovers 
+            call Brew Haven their second home.
+          </p>
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-secondary">Find Us</a>
+            <a href="menu.html" class="btn btn-outline">See Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Description -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">Brew Haven</span>
+          </div>
+          <p class="footer-description">
+            Crafting perfect moments, one cup at a time. 
+            Visit us for the finest artisan coffee experience in town.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Opening Hours -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Opening Hours</h3>
+          <ul class="footer-hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 10:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+            <li><span>Sunday</span><span>8:00 AM – 9:00 PM</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Info</h3>
+          <ul class="footer-contact">
+            <li>📍 Near NIT Warangal, Hanamkonda, Warangal, Telangana, India</li>
+            <li>📞 +91 90000 12345</li>
+            <li>✉️ <a href="mailto:reddysaicharan268@gmail.com" style="color: inherit; text-decoration: none;">reddysaicharan268@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew Haven Coffee Shop. All Rights Reserved.</p>
+        <p class="footer-designer">
+          Designed & Developed by 
+          <a href="https://github.com/saicharanreddy0825" target="_blank" rel="noopener noreferrer" class="designer-link">Thagireddy Sai Charan Reddy</a>
+          <span class="designer-title">| Full Stack Web Developer</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- ============================================
+       RESERVATION MODAL
+       ============================================ -->
+  <div class="modal" id="reservationModal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-target="book-tab">Book A Table</button>
+          <button class="modal-tab" data-target="view-tab" id="viewBookingsTab">My Reservations</button>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <!-- BOOK TABLE TAB -->
+        <div class="tab-content active" id="book-tab">
+          <h2 class="modal-title">Table Reservation</h2>
+          <p class="modal-subtitle">Secure your spot at Brew Haven Coffee Shop</p>
+          
+          <form id="reservationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName" class="form-label">Full Name *</label>
+                <input type="text" id="resName" class="form-input" placeholder="Your Name" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Mobile Number *</label>
+                <input type="tel" id="resPhone" class="form-input" placeholder="+91 90000 12345" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resEmail" class="form-label">Email Address *</label>
+                <input type="email" id="resEmail" class="form-input" placeholder="email@example.com" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Number of Guests *</label>
+                <select id="resGuests" class="form-select" required>
+                  <option value="" disabled selected>Select guests</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6+ People</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate" class="form-label">Reservation Date *</label>
+                <input type="date" id="resDate" class="form-input" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resTime" class="form-label">Reservation Time *</label>
+                <select id="resTime" class="form-select" required>
+                  <option value="" disabled selected>Select time slot</option>
+                  <option value="07:00 AM">07:00 AM</option>
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                  <option value="09:00 PM">09:00 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Seating Preference *</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Indoor" checked>
+                  <span>Indoor Seating</span>
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Outdoor">
+                  <span>Outdoor Seating (Garden/Balcony)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="resRequests" class="form-label">Special Requests</label>
+              <textarea id="resRequests" class="form-textarea" placeholder="E.g., birthday setup, high chair for baby, window seat, allergy details..." rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+          </form>
+        </div>
+        
+        <!-- VIEW RESERVATIONS TAB -->
+        <div class="tab-content" id="view-tab">
+          <h2 class="modal-title">My Reservations</h2>
+          <p class="modal-subtitle">Manage your bookings at Brew Haven</p>
+          
+          <div class="bookings-list" id="bookingsList">
+            <!-- Dynamically populated by JS -->
+            <div class="no-bookings">No reservations found yet. Book a table to get started!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEAUTIFUL CUSTOM TOAST SUCCESS POPUP -->
+  <div class="toast-popup" id="toastPopup" role="alert">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <h4 class="toast-title">Reservation Successful!</h4>
+      <p class="toast-message">Your table is locked in. See you soon!</p>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

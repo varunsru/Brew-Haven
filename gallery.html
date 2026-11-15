@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================
+       Brew Haven — Gallery Page (gallery.html)
+       Photo gallery with lightbox viewer
+       ============================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Brew Haven gallery — beautiful photos of our coffee shop, latte art, pastries, and cozy atmosphere near NIT Warangal.">
+  <title>Gallery — Brew Haven</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       NAVIGATION BAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Brew Haven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <!-- Mobile Reservation Link inside menu -->
+        <li class="mobile-only"><button class="mobile-nav-reserve-btn" id="mobileReserveBtn">Reserve Table</button></li>
+      </ul>
+      <div class="nav-actions">
+        <!-- Reserve Table Button (Desktop) -->
+        <button class="btn-nav-reserve" id="navReserveBtn">Reserve Table</button>
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="hero-badge">Visual Journey</span>
+        <h1 class="page-hero-title">Our Gallery</h1>
+        <p class="page-hero-description">
+          A peek inside our world — from latte art to cozy corners, every moment matters.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Gallery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY GRID
+         ============================================ -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-header scroll-animate">
+          <span class="section-subtitle">Explore</span>
+          <h2 class="section-title">Life at Brew Haven</h2>
+          <p class="section-description">
+            Click any image to view it in full size.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Image 1 — Latte Art (tall item, spans 2 rows) -->
+          <div class="gallery-item tall scroll-animate">
+            <img src="images/gallery_1.jpg" alt="Beautiful latte art in a ceramic cup" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Latte Art</h3>
+                <p>Every cup is a canvas for our baristas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 — Coffee Beans -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/gallery_2.jpg" alt="Premium roasted coffee beans" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Premium Beans</h3>
+                <p>Single-origin, ethically sourced</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 3 — Shop Interior -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/gallery_3.jpg" alt="Cozy coffee shop interior" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Our Space</h3>
+                <p>Warm, inviting, and always welcoming</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 4 — Pastries (wide item, spans 2 columns) -->
+          <div class="gallery-item wide scroll-animate">
+            <img src="images/gallery_4.jpg" alt="Fresh pastries and baked goods" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Fresh Pastries</h3>
+                <p>Baked in-house every single morning</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 5 — Barista at Work -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/gallery_5.jpg" alt="Barista making espresso" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Craft in Action</h3>
+                <p>Precision and passion in every shot</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 6 — Shop view -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/hero_bg.jpg" alt="Brew Haven shop view" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>The Haven</h3>
+                <p>Where coffee dreams come true</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 7 — Cozy Corner -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/gallery_6.jpg" alt="Cozy reading corner with coffee" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>Cozy Corners</h3>
+                <p>Your perfect reading nook</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 8 — About Coffee -->
+          <div class="gallery-item scroll-animate">
+            <img src="images/about_coffee.jpg" alt="Artisan coffee preparation" class="gallery-image">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h3>The Art of Coffee</h3>
+                <p>From bean to cup with love</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content scroll-animate">
+          <h2 class="cta-title">Want to See More?</h2>
+          <p class="cta-text">
+            Follow us on Instagram for daily updates, behind-the-scenes content, and latte art.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Visit Us Today</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       LIGHTBOX
+       ============================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">←</button>
+    <div class="lightbox-content">
+      <img src="" alt="Gallery image full view" class="lightbox-image">
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">→</button>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">Brew Haven</span>
+          </div>
+          <p class="footer-description">
+            Crafting perfect moments, one cup at a time. 
+            Visit us for the finest artisan coffee experience in town.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Opening Hours</h3>
+          <ul class="footer-hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 10:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+            <li><span>Sunday</span><span>8:00 AM – 9:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-heading">Contact Info</h3>
+          <ul class="footer-contact">
+            <li>📍 Near NIT Warangal, Hanamkonda, Warangal, Telangana, India</li>
+            <li>📞 +91 90000 12345</li>
+            <li>✉️ <a href="mailto:reddysaicharan268@gmail.com" style="color: inherit; text-decoration: none;">reddysaicharan268@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brew Haven Coffee Shop. All Rights Reserved.</p>
+        <p class="footer-designer">
+          Designed & Developed by 
+          <a href="https://github.com/saicharanreddy0825" target="_blank" rel="noopener noreferrer" class="designer-link">Thagireddy Sai Charan Reddy</a>
+          <span class="designer-title">| Full Stack Web Developer</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- ============================================
+       RESERVATION MODAL
+       ============================================ -->
+  <div class="modal" id="reservationModal" aria-hidden="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-target="book-tab">Book A Table</button>
+          <button class="modal-tab" data-target="view-tab" id="viewBookingsTab">My Reservations</button>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <!-- BOOK TABLE TAB -->
+        <div class="tab-content active" id="book-tab">
+          <h2 class="modal-title">Table Reservation</h2>
+          <p class="modal-subtitle">Secure your spot at Brew Haven Coffee Shop</p>
+          
+          <form id="reservationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName" class="form-label">Full Name *</label>
+                <input type="text" id="resName" class="form-input" placeholder="Your Name" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Mobile Number *</label>
+                <input type="tel" id="resPhone" class="form-input" placeholder="+91 90000 12345" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resEmail" class="form-label">Email Address *</label>
+                <input type="email" id="resEmail" class="form-input" placeholder="email@example.com" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Number of Guests *</label>
+                <select id="resGuests" class="form-select" required>
+                  <option value="" disabled selected>Select guests</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6+ People</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate" class="form-label">Reservation Date *</label>
+                <input type="date" id="resDate" class="form-input" required>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-group">
+                <label for="resTime" class="form-label">Reservation Time *</label>
+                <select id="resTime" class="form-select" required>
+                  <option value="" disabled selected>Select time slot</option>
+                  <option value="07:00 AM">07:00 AM</option>
+                  <option value="08:00 AM">08:00 AM</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                  <option value="09:00 PM">09:00 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+                <p class="form-error" role="alert"></p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Seating Preference *</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Indoor" checked>
+                  <span>Indoor Seating</span>
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="resSeating" value="Outdoor">
+                  <span>Outdoor Seating (Garden/Balcony)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="resRequests" class="form-label">Special Requests</label>
+              <textarea id="resRequests" class="form-textarea" placeholder="E.g., birthday setup, high chair for baby, window seat, allergy details..." rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+          </form>
+        </div>
+        
+        <!-- VIEW RESERVATIONS TAB -->
+        <div class="tab-content" id="view-tab">
+          <h2 class="modal-title">My Reservations</h2>
+          <p class="modal-subtitle">Manage your bookings at Brew Haven</p>
+          
+          <div class="bookings-list" id="bookingsList">
+            <!-- Dynamically populated by JS -->
+            <div class="no-bookings">No reservations found yet. Book a table to get started!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEAUTIFUL CUSTOM TOAST SUCCESS POPUP -->
+  <div class="toast-popup" id="toastPopup" role="alert">
+    <div class="toast-icon">✨</div>
+    <div class="toast-content">
+      <h4 class="toast-title">Reservation Successful!</h4>
+      <p class="toast-message">Your table is locked in. See you soon!</p>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
